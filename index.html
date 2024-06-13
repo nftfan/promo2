@@ -42,7 +42,7 @@
     background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better contrast */
     padding: 30px; /* Increased padding for more space */
     border-radius: 15px; /* Increased border radius for a smoother look */
-    width: 80%;
+    width: 60%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added subtle shadow for depth */
 }
 
@@ -145,7 +145,18 @@
             text-align: center;
             z-index: 1000;
             display: none;
+			animation: popupAnimation 1s ease-in-out forwards;
         }
+		@keyframes popupAnimation {
+        0% {
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+    }
         .popup img {
             width: 100%;
             height: auto;
