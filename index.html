@@ -26,20 +26,24 @@
         }
         .promo-container h1 {
             margin: 0;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 10px 10px 0 0;
+            padding: 10px;
+            background-color: #11b39c;
+			border-radius: 10px;
+            
         }
         .promo-container img {
-            width: 100%;
-            border-radius: 0 0 10px 10px;
-        }
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+    filter: blur(0px); /* Adjust the value to control the level of blur */
+}
+
 .input-container {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better contrast */
+background-color: rgba(0, 0, 0, 0.9);
     padding: 30px; /* Increased padding for more space */
     border-radius: 15px; /* Increased border radius for a smoother look */
     width: 60%;
@@ -87,27 +91,28 @@
             font-size: 20px;
             font-weight: bold;
             padding: 10px;
-            background-color: #1e1e1e;
+            background-color: #11b39c;
             border-radius: 10px;
-            display: inline-flex;
+            
             align-items: center;
         }
         .links-title img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
+            width: 0px;
+            height: 0px;
+            margin-right: 0px;
         }
         .link-button {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            background-color: #1e1e1e;
-            color: #ffffff;
+            background-color: #f0f0f0;
+            color: #000000;
             padding: 10px;
             margin: 5px 0;
-            border-radius: 5px;
+            border-radius: 25px;
             text-decoration: none;
             font-size: 16px;
+			font-weight: bold;
             transition: background-color 0.3s;
         }
         .link-button img {
@@ -116,7 +121,7 @@
             margin-right: 10px;
         }
         .link-button:hover {
-            background-color: #333333;
+            background-color: #11b39c;
         }
         .video-container {
             margin-top: 20px;
@@ -206,7 +211,7 @@
 </head>
 <body>
     <div class="promo-container">
-        <h1 style="font-size: 20px;">Promo Page</h1>
+        <h1> Promo Page </h1>
         <img src="https://i.ibb.co/NZtQw67/salas3345.png" alt="Promo Image">
         <div class="input-container">
             <form id="promoForm" onsubmit="return validatePromoCode()">
