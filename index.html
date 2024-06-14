@@ -28,60 +28,55 @@
             margin: 0;
             padding: 10px;
             background-color: #11b39c;
-			border-radius: 10px;
-            
+            border-radius: 10px;
         }
         .promo-container img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 5px;
-    filter: blur(0px); /* Adjust the value to control the level of blur */
-}
-
-.input-container {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 5px;
+            filter: blur(0px);
+        }
+        .input-container {
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-background-color: rgba(0, 0, 0, 0.9);
-    padding: 30px; /* Increased padding for more space */
-    border-radius: 15px; /* Increased border radius for a smoother look */
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
     width: 60%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center content horizontally */
 }
-
 .promo-input {
-    width: 100%; /* Set width to 100% for full width */
-    padding: 15px; /* Increased padding for a bigger input field */
-    font-size: 18px; /* Increased font size for better readability */
-    margin-bottom: 15px; /* Increased margin for better spacing */
-    border: 2px solid #007bff; /* Changed border color for better visibility */
-    border-radius: 5px;
+    width: 80%; /* Adjust width as needed */
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border: 2px solid #007bff;
+    border-radius: 20px;
     color: #000000;
     text-align: center;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Added inner shadow for depth */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.submit-button {
-    width: 50%; /* Made the submit button smaller */
-    padding: 10px; /* Reduced padding for a smaller button */
-    font-size: 16px; /* Slightly smaller font size */
-    border: none;
-    border-radius: 25px;
-    background-color: #007bff; /* Changed button color for a professional look */
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Added smooth transition for hover effect */
-    margin-top: 10px; /* Added margin for spacing */
-}
-
-.submit-button:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
-    transform: translateY(-3px); /* Slight lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for hover effect */
-}
-
-
+        .submit-button {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 10px;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
         .links-container {
             margin-top: 10px;
             text-align: center;
@@ -93,7 +88,6 @@ background-color: rgba(0, 0, 0, 0.9);
             padding: 10px;
             background-color: #11b39c;
             border-radius: 10px;
-            
             align-items: center;
         }
         .links-title img {
@@ -112,7 +106,7 @@ background-color: rgba(0, 0, 0, 0.9);
             border-radius: 25px;
             text-decoration: none;
             font-size: 16px;
-			font-weight: bold;
+            font-weight: bold;
             transition: background-color 0.3s;
         }
         .link-button img {
@@ -150,18 +144,18 @@ background-color: rgba(0, 0, 0, 0.9);
             text-align: center;
             z-index: 1000;
             display: none;
-			animation: popupAnimation 1s ease-in-out forwards;
+            animation: popupAnimation 1s ease-in-out forwards;
         }
-		@keyframes popupAnimation {
-        0% {
-            transform: translate(-50%, -50%) scale(0.5);
-            opacity: 0;
+        @keyframes popupAnimation {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
         }
-        100% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1;
-        }
-    }
         .popup img {
             width: 100%;
             height: auto;
@@ -215,7 +209,7 @@ background-color: rgba(0, 0, 0, 0.9);
         <img src="https://i.ibb.co/NZtQw67/salas3345.png" alt="Promo Image">
         <div class="input-container">
             <form id="promoForm" onsubmit="return validatePromoCode()">
-                <input type="text" id="promoCode" name="promoCode" placeholder="Enter Promo code" required>
+                <input type="text" id="promoCode" name="promoCode" placeholder="Enter Promo code" class="promo-input" required>
                 <button type="submit" class="submit-button">Submit</button>
                 <p id="errorMessage" class="error-message"></p>
             </form>
